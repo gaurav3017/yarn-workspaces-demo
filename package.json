@@ -2,8 +2,16 @@
     "name": "cra-monorepo",
     "version": "1.0.0",
     "private": true,
-    "workspaces": [
-        "apps/*",
-        "packages/*"
-    ]
+    "workspaces": {
+        "packages": [
+            "apps/*",
+            "packages/*"
+        ],
+        "nohoist": [
+            "**/jest"
+        ]
+    },
+    "dependencies": {
+        "prettier": "^2.0.5"
+    }
 }
